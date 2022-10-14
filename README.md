@@ -13,6 +13,10 @@ Created just for testing how _NestJS_ works
 - _Interceptors_ - Adds extra logic to incoming requests or outgoing responses
 - _Repositories_ - Access database
 
+### Example usage
+
+![NestJS basic flow](https://user-images.githubusercontent.com/44510623/195880686-f88aa55d-1647-49e4-a429-2280e0998376.jpg)
+
 ## Conventions
 ### Rules
 - One class per file
@@ -30,9 +34,3 @@ Created just for testing how _NestJS_ works
 - File: `app.module.ts`
 - Class: `AppModule {...}`
 
-
-# Messages app
-
-## Basic NestJS flow
-
-![NestJS basic flow](https://user-images.githubusercontent.com/44510623/195880686-f88aa55d-1647-49e4-a429-2280e0998376.jpg)
