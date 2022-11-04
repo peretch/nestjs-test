@@ -8,6 +8,11 @@ export class MessagesController {
     return [];
   }
 
+  // ? This pipe validator is working because of the usage of the following configurations:
+  // "emitDecoratorMetadata": true
+  // "experimentalDecorators": true
+  // This configuration allows TypeScript to concat some metadata to javascript
+  // __metadata("design:paramtypes", [create_message_dto_1.CreateMessageDto]),
   @Post()
   createMessage(@Body() body: CreateMessageDto) {
     return body;

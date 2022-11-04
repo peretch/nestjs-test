@@ -13,6 +13,20 @@ Created just for testing how _NestJS_ works
 - _Interceptors_ - Adds extra logic to incoming requests or outgoing responses
 - _Repositories_ - Access database
 
+### Validation Pipes
+
+#### Some interesting packages to understand
+
+- `class-transformer` converts a JavaScript object into a class.
+- `class-validator` provides decorators to add validations inside a DTO class
+
+#### Flow
+
+1. The request's body is converted into an instance of DTO Class (making use of `class-transformer`)
+2. This DTO Class contains validation rules with the decorators provided by `class-validator`
+3. A) The validation pipe will check if all validations are OK. If not, it will immediately send back an error response to whoever made the request.
+4. B) If validation is OK, the body will be passed to the request handler (controller).
+
 ### Example usage
 
 ![NestJS basic flow](https://user-images.githubusercontent.com/44510623/195880686-f88aa55d-1647-49e4-a429-2280e0998376.jpg)
