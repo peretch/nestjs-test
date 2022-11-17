@@ -75,3 +75,19 @@ nest generate controller <module-name>/<controller-name> --flat
 
 - _This command will generate inside your module one controller (`<controller-name>.controller.js`) and one test (`<controller-name>.controller.spec.js`)_
 - _The `flat` option tells NestJS to avoid the creation of an extra folder called `controllers`. If your module contains just one controller, is good practice to use this option._
+
+# Theory
+
+## Dependency Injections
+
+### Inversion of control principle
+
+- Classes should not create instances of their dependencies
+
+### DI Container Flow
+
+1. At startup, register all classes with the container
+2. The container will figure out what each dependency each class has
+3. We then ask the container to create an instance of a class for us
+4. The container creates all required dependencies and gives us the instance
+5. The container will hold onto the created dependency instances and reuse them if needed

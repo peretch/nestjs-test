@@ -11,12 +11,7 @@ import { MessagesService } from './messages.service';
 
 @Controller('messages') // Class decorator
 export class MessagesController {
-  messagesService: MessagesService;
-
-  constructor() {
-    // ! NEVER DO THIS ON REAL APPS, use Dependency Injections instead
-    this.messagesService = new MessagesService();
-  }
+  constructor(public messagesService: MessagesService) {}
 
   @Get() // method decorator
   listMessages() {
